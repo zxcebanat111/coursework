@@ -1,0 +1,206 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{burke_etal_2019}{incollection}{}{}
+      \name{author}{6}{}{%
+        {{hash=8dd3f7456cd191bd00afa2f0397b0878}{%
+           family={Burke},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi K.},
+           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3cfa24672105f963996b9c34bff2b83f}{%
+           family={Hyde},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=03cc328a74f2098436639f77227db79a}{%
+           family={Kendall},
+           familyi={K\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=799f2cd704979371022df0c9c9de5128}{%
+           family={Ochoa},
+           familyi={O\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4d97675b436f8456aa3d6b10c17c0a32}{%
+           family={Özcan},
+           familyi={Ö\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=736d9a3e18a16bd04c9a5641aca6497a}{%
+           family={Woodward},
+           familyi={W\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d41d8cd98f00b204e9800998ecf8427e}{%
+           family={...},
+           familyi={.\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c68893dbe22044fe425102bf5e131258}
+      \strng{fullhash}{2fc5387de323142a136bbdff406af746}
+      \strng{fullhashraw}{2fc5387de323142a136bbdff406af746}
+      \strng{bibnamehash}{2fc5387de323142a136bbdff406af746}
+      \strng{authorbibnamehash}{2fc5387de323142a136bbdff406af746}
+      \strng{authornamehash}{c68893dbe22044fe425102bf5e131258}
+      \strng{authorfullhash}{2fc5387de323142a136bbdff406af746}
+      \strng{authorfullhashraw}{2fc5387de323142a136bbdff406af746}
+      \strng{editorbibnamehash}{d41d8cd98f00b204e9800998ecf8427e}
+      \strng{editornamehash}{d41d8cd98f00b204e9800998ecf8427e}
+      \strng{editorfullhash}{d41d8cd98f00b204e9800998ecf8427e}
+      \strng{editorfullhashraw}{d41d8cd98f00b204e9800998ecf8427e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of Metaheuristics}
+      \field{title}{A Classification of Hyper-Heuristic Approaches: Revisited}
+      \field{year}{2019}
+      \field{pages}{453\bibrangedash 477}
+      \range{pages}{25}
+    \endentry
+    \entry{WHH}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=0f5307c3526364efd22c194d89acc80d}{%
+           family={Daliri},
+           familyi={D\bibinitperiod},
+           given={Arman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6a2d1d9e4f4ad34a6abb6beee7451eaf}{%
+           family={Alimoradi},
+           familyi={A\bibinitperiod},
+           given={Mahmoud},
+           giveni={M\bibinitperiod}}}%
+        {{hash=415e936979fb49cd8b229dac6da35b72}{%
+           family={Zabihimayvan},
+           familyi={Z\bibinitperiod},
+           given={Mahdieh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=32987465a3359bd8fdccce2a5b9461e7}{%
+           family={Sadeghi},
+           familyi={S\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{69b8f204eaacbdf624f820f2d3c8609b}
+      \strng{fullhash}{a2e36230c6a107ebe80d676358d1bb1a}
+      \strng{fullhashraw}{a2e36230c6a107ebe80d676358d1bb1a}
+      \strng{bibnamehash}{a2e36230c6a107ebe80d676358d1bb1a}
+      \strng{authorbibnamehash}{a2e36230c6a107ebe80d676358d1bb1a}
+      \strng{authornamehash}{69b8f204eaacbdf624f820f2d3c8609b}
+      \strng{authorfullhash}{a2e36230c6a107ebe80d676358d1bb1a}
+      \strng{authorfullhashraw}{a2e36230c6a107ebe80d676358d1bb1a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{title}{World Hyper-Heuristic: A novel reinforcement learning approach for dynamic exploration and exploitation}
+      \field{volume}{244}
+      \field{year}{2024}
+      \field{pages}{122931}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2023.122931
+      \endverb
+    \endentry
+    \entry{trivedi_varshney}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a32b9da3e5fb4762003bfd0f2de3acfd}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ed492868b6e63d6486d087b8939d2096}{%
+           family={Varshney},
+           familyi={V\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=45e51fce267ccc82e05e66ded7a76048}{%
+           family={Ramteke},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{fullhash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{fullhashraw}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{bibnamehash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{authorbibnamehash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{authornamehash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{authorfullhash}{fa19603a6516a1e7eda0b2a5442f4528}
+      \strng{authorfullhashraw}{fa19603a6516a1e7eda0b2a5442f4528}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Springer Nature}
+      \field{title}{A simplified multi-objective particle swarm optimization algorithm}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{83\bibrangedash 116}
+      \range{pages}{34}
+    \endentry
+    \entry{nofreelunch}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e3b028ab5fe6676668bb388f38a5dea}{%
+           family={Wolpert},
+           familyi={W\bibinitperiod},
+           given={D.\bibnamedelimi H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=27dff62574d6d47b2419ae464415e631}{%
+           family={Macready},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi G.},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{fullhash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{fullhashraw}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{bibnamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authorbibnamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authornamehash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authorfullhash}{e5a91da6001162a1dd1c4014f232ce1d}
+      \strng{authorfullhashraw}{e5a91da6001162a1dd1c4014f232ce1d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{number}{1}
+      \field{title}{No Free Lunch Theorems for Optimization}
+      \field{volume}{1}
+      \field{year}{1997}
+      \field{pages}{67\bibrangedash 82}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

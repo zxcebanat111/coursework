@@ -1,7 +1,7 @@
 function  mutpop=mutation(mutpop,pop,model)
 
 nmut=model.nMut;
-npop=model.n;
+npop=numel(pop);
 
 
 for n=1:nmut

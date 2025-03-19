@@ -5,7 +5,7 @@ format shortG
 
 
 %% Insert Data
-model=CreateModel();    % Create Problem Model
+model=CreateModelRealData();    % Create Problem Model
 CostFunction=@(tour) TourLength(tour,model);    % Cost Function
 
 %% parametres setting
