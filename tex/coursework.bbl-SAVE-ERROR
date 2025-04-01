@@ -19,37 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{ICA}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=6a6778648635e5acc52c3494ac2a92cf}{%
-           family={Atashpaz-Gargari},
-           familyi={A\bibinithyphendelim G\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8b747b1942b99d15f487f8070229b093}{%
-           family={Lucas},
-           familyi={L\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{fullhash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{fullhashraw}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{bibnamehash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{authorbibnamehash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{authornamehash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{authorfullhash}{8bce284c351e987c211cbb777ce9fed1}
-      \strng{authorfullhashraw}{8bce284c351e987c211cbb777ce9fed1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{In 2007 IEEE Congress on Evolutionary Computation}
-      \field{title}{An Algorithm for Optimization Inspired by Imperialistic Competition}
-      \field{year}{2007}
-      \field{pages}{4661\bibrangedash 5467}
-      \range{pages}{807}
-    \endentry
     \entry{burke_etal_2019}{incollection}{}{}
       \name{author}{6}{}{%
         {{hash=8dd3f7456cd191bd00afa2f0397b0878}{%
@@ -184,47 +153,6 @@
       \field{pages}{28\bibrangedash 39}
       \range{pages}{12}
     \endentry
-    \entry{speedred}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=e9149d57a451475d65638ef3b170c33e}{%
-           family={Hassan},
-           familyi={H\bibinitperiod}}}%
-        {{hash=3a2fda08afe1a4fc2e894905da9fde9f}{%
-           family={Rania},
-           familyi={R\bibinitperiod}}}%
-        {{hash=9395cf709c077fa81b66dfadc6ad2795}{%
-           family={Cohanim},
-           familyi={C\bibinitperiod},
-           given={Babak},
-           giveni={B\bibinitperiod}}}%
-        {{hash=971cd52974e5114154e2a7a846aeb666}{%
-           family={Weck},
-           familyi={W\bibinitperiod},
-           given={Olivier\bibnamedelima De},
-           giveni={O\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-        {{hash=a69f900f7ac84227fff702ca92c5a4d8}{%
-           family={Venter},
-           familyi={V\bibinitperiod},
-           given={Gerhard},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{752ff3c2e94caab100ddcef7e0f06fdf}
-      \strng{fullhash}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \strng{fullhashraw}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \strng{bibnamehash}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \strng{authorbibnamehash}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \strng{authornamehash}{752ff3c2e94caab100ddcef7e0f06fdf}
-      \strng{authorfullhash}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \strng{authorfullhashraw}{210aefc1b5e94afb79c5a40f6a6e08aa}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials}
-      \field{title}{A Comparison of Particle Swarm Optimization and the Genetic Algorithm.}
-      \field{volume}{46}
-      \field{year}{2005}
-    \endentry
     \entry{SA}{article}{}{}
       \name{author}{3}{}{%
         {{hash=7872b231407c202bb66a9588eac3de57}{%
@@ -261,43 +189,6 @@
       \field{year}{1983}
       \field{pages}{671\bibrangedash 680}
       \range{pages}{10}
-    \endentry
-    \entry{GWO}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=5dc87bd4c51bc22516c8bd1533a3ec07}{%
-           family={Mirjalili},
-           familyi={M\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=228ebfc3f965dc4a37926ee08d2a70f9}{%
-           family={Mirjalili},
-           familyi={M\bibinitperiod},
-           given={S.\bibnamedelimi M.},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=6521f9af0110acdf9d999d3944f40b5e}{%
-           family={Lewis},
-           familyi={L\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{fullhash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{fullhashraw}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{bibnamehash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{authorbibnamehash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{authornamehash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{authorfullhash}{6fc47e60ceb9ef585dce6be69383e923}
-      \strng{authorfullhashraw}{6fc47e60ceb9ef585dce6be69383e923}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Advances in Engineering Software}
-      \field{title}{Grey Wolf Optimizer}
-      \field{volume}{69}
-      \field{year}{2014}
-      \field{pages}{46\bibrangedash 61}
-      \range{pages}{16}
     \endentry
     \entry{Thompson}{article}{}{}
       \name{author}{2}{}{%
@@ -369,50 +260,6 @@
       \field{pages}{83\bibrangedash 116}
       \range{pages}{34}
     \endentry
-    \entry{weldedbeam}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=957b05eb2d9bfaf59947e44a46c3c7b3}{%
-           family={Wang},
-           familyi={W\bibinitperiod}}}%
-        {{hash=f4a94ab5dacfb58c6cbeadb8b7af07fb}{%
-           family={Weijun},
-           familyi={W\bibinitperiod}}}%
-        {{hash=bbce17590189551190ef26512177fa4e}{%
-           family={Caro},
-           familyi={C\bibinitperiod},
-           given={Stéphane},
-           giveni={S\bibinitperiod}}}%
-        {{hash=2921b9c76f712d655833247543eab007}{%
-           family={Bennis},
-           familyi={B\bibinitperiod},
-           given={Fouad},
-           giveni={F\bibinitperiod}}}%
-        {{hash=21ba648c7337b601b09a869c468403a3}{%
-           family={Augusto},
-           familyi={A\bibinitperiod},
-           given={Oscar\bibnamedelima Brito},
-           giveni={O\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \strng{namehash}{1bcc882a18bd2fa3f5719ee83d936edb}
-      \strng{fullhash}{bdf09e495553f6dd95e09954dbad9b7e}
-      \strng{fullhashraw}{bdf09e495553f6dd95e09954dbad9b7e}
-      \strng{bibnamehash}{bdf09e495553f6dd95e09954dbad9b7e}
-      \strng{authorbibnamehash}{bdf09e495553f6dd95e09954dbad9b7e}
-      \strng{authornamehash}{1bcc882a18bd2fa3f5719ee83d936edb}
-      \strng{authorfullhash}{bdf09e495553f6dd95e09954dbad9b7e}
-      \strng{authorfullhashraw}{bdf09e495553f6dd95e09954dbad9b7e}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Engineering Systems Design and Analysis}
-      \field{number}{44861}
-      \field{title}{Toward the Use of Pareto Performance Solutions and Pareto Robustness Solutions for Multi-Objective Robust Optimization Problems.}
-      \field{volume}{5}
-      \field{year}{2012}
-      \field{pages}{41\bibrangedash 50}
-      \range{pages}{10}
-    \endentry
     \entry{nofreelunch}{article}{}{}
       \name{author}{2}{}{%
         {{hash=9e3b028ab5fe6676668bb388f38a5dea}{%
@@ -445,22 +292,6 @@
       \field{year}{1997}
       \field{pages}{67\bibrangedash 82}
       \range{pages}{16}
-    \endentry
-    \entry{RWTCP}{online}{}{}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labeltitlesource}{title}
-      \field{title}{World Traveling Salesman Problem}
-      \field{urlday}{4}
-      \field{urlmonth}{10}
-      \field{urlyear}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://www.math.uwaterloo.ca/tsp/world/index.html
-      \endverb
-      \verb{url}
-      \verb http://www.math.uwaterloo.ca/tsp/world/index.html
-      \endverb
     \endentry
     \entry{COTEJA}{article}{}{}
       \name{author}{3}{}{%
@@ -501,7 +332,6 @@
       \range{pages}{10}
     \endentry
   \enddatalist
-  \missing{taxonmy}
 \endrefsection
 \endinput
 

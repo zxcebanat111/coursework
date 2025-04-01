@@ -249,7 +249,6 @@ for it=1:nAlg
         pop(k).Cost=CostFunction(pop(k).Position);
         
         if pop(k).Cost<BestSol.Cost
-            BestSol=pop(k);
         end
         
     end
