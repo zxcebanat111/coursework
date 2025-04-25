@@ -1,177 +1,89 @@
-from ACOClass import ACO
-from CreateModel import CreateModel
-from GAClass import GA
-from GWOClass import GWO
-from ICAClass import ICA
 from RouletteWheelSelection import RouletteWheelSelection
-from SAClass import SA
 from SolutionClass import Solution
-from TabuClass import TabuSearch
-from TourLength import TourLength
 
-from functools import partial
+from typing import Any, Dict, List
 import numpy as np
 import numpy.typing as npt
 import tqdm
 
 
-def RunWHH(x, y):
-# Insert Data
-    model = CreateModel(x, y)
-    CostFunction = partial(TourLength, distances=model["d"])
+def RunWHH(N: int,
+           nPopulation: int,
+           MaxIt: int,
+           algorithms: Dict[str, Any],
+           RLAlpha: float,
+           CostFunction):
 
-# Parameter settings
-    nPopulation = 50
-    MaxIt = 50
-    nAlg = 6
-    RLAlpha = 0
+    nAlg = len(algorithms)
 
-
-# GA parameters
-    GAObject = GA(nPopulation)
-
-# SA parameters
-    SAObject = SA()
-
-# ACO parameters
-    ACOObject = ACO()
-
-# ICA parameters
-    ICAObject = ICA()
-
-# Taboo parameters
-    TabuObject = TabuSearch()
-
-# GWO parameters
-    GWOObject = GWO()
-
-# Initialization
-
-# Create empty structure for individuals
-
-# Create Population Array
     population = np.array([Solution() for _ in range(nPopulation)])
 
-# Initialize Best Solution
-    BestSol = Solution()
+    BestSol: Solution = population[0]
 
-# Initialize Population
     for i in range(nPopulation):
 
-        # Initialize Position
-        population[i].Position = np.random.permutation(model["n"])
+        population[i].Position = np.random.permutation(N)
 
-        # Evaluation
         population[i].Cost = CostFunction(population[i].Position)
 
-        # Update Best Solution
         if population[i].Cost <= BestSol.Cost:
             BestSol = population[i].copy()
 
-# Array to hold best cost values
-    BestCostMaxiter = np.ones(MaxIt) * np.inf
-    names = ['sa', 'ga', 'aco', 'tabu', 'ica', 'gwo']
+    BestCostMaxiter = np.ones(MaxIt + 1) * np.inf
+    BestSolMaxiter: List[Solution] = [Solution() for _ in range(MaxIt + 1)]
+    names = list(algorithms.keys())
     algRewards = {name : -np.inf for name in names}
-
     savedPopulation = population.copy()
-
-    pop = savedPopulation.copy()
-
-    BestSolSA: Solution = SAObject.initialize(pop, CostFunction)
-    algRewards['sa'] = 1.0 / (BestSolSA.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
-
-
-    pop = savedPopulation.copy()
-
-    BestSolGA: Solution = GAObject.initialize(pop, CostFunction)
-    algRewards['ga'] = 1.0 / (BestSolGA.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
-
-
-    pop = savedPopulation.copy()
-
-    BestSolACO: Solution = ACOObject.initialize(pop, CostFunction)
-    algRewards['aco'] = 1.0 / (BestSolACO.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
-
-
-    pop = savedPopulation.copy()
-
-    BestSolTabu: Solution = TabuObject.initialize(pop, CostFunction)
-    algRewards['tabu'] = 1.0 / (BestSolTabu.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
-
-
-    pop = savedPopulation.copy()
-
-    BestSolICA: Solution = ICAObject.initialize(pop, CostFunction)
-    algRewards['ica'] = 1.0 / (BestSolICA.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
-
-
-    pop = savedPopulation.copy()
-
-    BestSolGWO: Solution = GWOObject.initialize(pop, CostFunction)
-    algRewards['gwo'] = 1.0 / (BestSolGWO.Cost + 1e-10)
-    SAObject.T *= SAObject.alpha
+    solutions: Dict[str, Solution] = {}
+    for name in names:
+        pop = savedPopulation.copy()
+        solutions[name] = algorithms[name].initialize(pop, CostFunction)
+        algRewards[name] = 1.0 / (solutions[name].Cost + 1e-10)
+        algorithms['sa'].T *= algorithms['sa'].alpha
+        if solutions[name].Cost < BestSol.Cost:
+            BestSol = solutions[name].copy()
+    BestCostMaxiter[0] = BestSol.Cost
+    BestSolMaxiter[0] = BestSol.copy()
+    improvements_to_del = {name : {"count" : 0, "sum" : 0.0} for name in names}
 
     rewards = list(sorted(list(algRewards.items()), key=lambda x : x[1]))
-    for iter in tqdm.tqdm(range(MaxIt)):
+
+    pop = savedPopulation.copy()
+    for iter in range(1, MaxIt + 1):
+        print("------------------------------")
+        print("Iteration", iter)
         chRand = np.random.rand()
         if chRand > RLAlpha:
             algInd = np.random.randint(nAlg)
             lotCH = names[algInd]
         else:
-            rewValues = np.array([item[1] for item in rewards])
-            P: npt.NDArray[np.float64] = rewValues / rewValues.sum()
+            newValues = np.array([item[1] for item in rewards])
+            P: npt.NDArray[np.float64] = newValues / newValues.sum()
             lotCH = rewards[RouletteWheelSelection(P)][0]
-        if lotCH == 'sa':
-            BestSolSA: Solution = SAObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolSA.Cost + 1e-10)
+        solutions[lotCH] = algorithms[lotCH].initialize(pop, CostFunction)
+        # print(f"Chosen Algorithm : {lotCH}")
+        # print(f"Current Best Found Cost : {BestSol.Cost}")
+        # print(f"Best Found Cost by Algorithm: {solutions[lotCH].Cost}")
+        if solutions[lotCH].Cost < BestSol.Cost:
+            improvements_to_del[lotCH]["count"] += 1
+            improvements_to_del[lotCH]["sum"] += BestSol.Cost - solutions[lotCH].Cost
+            BestSol = solutions[lotCH].copy()
 
-            if BestSolSA.Cost < BestSol.Cost:
-                BestSol = BestSolSA.copy()
-        elif lotCH == 'ga':
-            BestSolGA: Solution = GAObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolGA.Cost + 1e-10)
-
-            if BestSolGA.Cost < BestSol.Cost:
-                BestSol = BestSolGA.copy()
-        elif lotCH == 'aco':
-            BestSolACO: Solution = ACOObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolACO.Cost + 1e-10)
-
-            if BestSolACO.Cost < BestSol.Cost:
-                BestSol = BestSolACO.copy()
-        elif lotCH == 'tabu':
-            BestSolTabu: Solution = TabuObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolTabu.Cost + 1e-10)
-
-            if BestSolTabu.Cost < BestSol.Cost:
-                BestSol = BestSolTabu.copy()
-        elif lotCH == 'ica':
-            BestSolICA: Solution = ICAObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolICA.Cost + 1e-10)
-
-            if BestSolICA.Cost < BestSol.Cost:
-                BestSol = BestSolICA.copy()
-        elif lotCH == 'gwo':
-            BestSolGWO: Solution = GWOObject.initialize(pop, CostFunction)
-            algRewards[lotCH] = 1.0 / (BestSolGWO.Cost + 1e-10)
-
-            if BestSolGWO.Cost < BestSol.Cost:
-                BestSol = BestSolGWO.copy()
         BestCostMaxiter[iter] = BestSol.Cost
-        if iter > 1:
-            algRewards[lotCH] = algRewards[lotCH] + BestCostMaxiter[iter - 1] - BestCostMaxiter[iter]
-            if BestCostMaxiter[iter - 1] == BestCostMaxiter[iter]:
-                algRewards[lotCH] -= float(np.mean(list(algRewards.values())))
-        else:
-            algRewards[lotCH] = algRewards[lotCH] + BestCostMaxiter[iter]
+        BestSolMaxiter[iter] = BestSol.copy()
+        algRewards[lotCH] = algRewards[lotCH] + BestCostMaxiter[iter - 1] - BestCostMaxiter[iter]
+        if BestCostMaxiter[iter - 1] == BestCostMaxiter[iter]:
+            algRewards[lotCH] -= float(np.mean(list(algRewards.values())))
 
         RLAlpha += 1 / MaxIt
         rewards = list(sorted(list(algRewards.items()), key=lambda x : x[1]))
+        pop.sort()
         # print("Iteration:", iter, "Best Cost:", BestCostMaxiter[iter])
-        SAObject.T *= SAObject.alpha
-    return BestCostMaxiter
+        algorithms['sa'].T *= algorithms['sa'].alpha
+        print('Improvements by algorithms')
+        for item in improvements_to_del.items():
+            print(f"{item[0]} : {item[1]}")
+        print('AlgRewards by algorithms')
+        for item in algRewards.items():
+            print(f"{item[0]} : {item[1]}")
+    return BestCostMaxiter, BestSolMaxiter

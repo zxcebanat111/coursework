@@ -9,10 +9,10 @@ from SolutionClass import Solution
 class SA:
 
     def __init__(self,
-                 maxSubIt: int  = 10,
+                 maxSubIt: int  = 100,
                  T0: float      = 0.025,
                  alpha: float   = 0.99,
-                 nNeigbors: int = 5):
+                 nNeigbors: int = 10):
 
         self.maxSubIt: int  = maxSubIt
         self.T: float      = T0
